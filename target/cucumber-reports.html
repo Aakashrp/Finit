@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Cucumber</title>
+	<meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+	<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20class%3D%22ml-3%20ml-md-0%22%20viewBox%3D%220%200%2040.59%2046.31%22%20width%3D%2240.59%22%20height%3D%2246.31%22%3E%0A%20%20%20%20%3Cg%3E%0A%20%20%20%20%20%20%20%20%3Cpath%20fill%3D%22%2323d96c%22%20fill-rule%3D%22evenodd%22%20d%3D%22M30.283%203.645q-.528-.317-1.08-.593a16.164%2016.164%200%2000-1.154-.518c-.124-.052-.247-.1-.372-.149-.343-.127-.689-.268-1.042-.371a19.427%2019.427%200%2010-9.792%2037.51v5.56c11.676-1.753%2022.016-10.979%2022.787-23.093.459-7.289-3.193-14.73-9.347-18.346z%22%2F%3E%0A%20%20%20%20%20%20%20%20%3Cpath%20fill%3D%22%23173647%22%20d%3D%22M15.787%2046.307v-5.935A20.472%2020.472%200%201126.959%201.015c.274.08.557.187.832.291l.248.093c.165.064.291.113.417.167.348.137.739.313%201.208.543q.589.295%201.153.633c6.393%203.756%2010.354%2011.518%209.857%2019.316-.763%2012-10.722%2022.122-23.679%2024.067zm4.8-44.214h-.026a18.366%2018.366%200%2000-3.524%2036.408l.85.165v5.18c11.392-2.224%2020.009-11.272%2020.686-21.922.448-7.033-3.1-14.018-8.83-17.383l-.008-.005A14.691%2014.691%200%200027.654%203.5a5.74%205.74%200%2000-.344-.138l-.27-.1a9.49%209.49%200%2000-.708-.249%2018.425%2018.425%200%2000-5.743-.92z%22%2F%3E%0A%20%20%20%20%20%20%20%20%3Cpath%20fill%3D%22%23173647%22%20fill-rule%3D%22evenodd%22%20d%3D%22M16.666%2010.58a1.8%201.8%200%20011.583.608%204.184%204.184%200%2001.728%201.107c.645%201.422%201.027%203.461.23%204.605a6.334%206.334%200%2001-3.981-3.087%203.236%203.236%200%2001-.347-1.339%201.957%201.957%200%20011.787-1.894zm-5.683%208.025a7.742%207.742%200%20001.218.737%205.789%205.789%200%20004.883-.138%206.116%206.116%200%2000-3.345-3.45%203.664%203.664%200%2000-1.442-.321%201.884%201.884%200%2000-.319%200%201.766%201.766%200%2000-.995%203.172zm6.1%203.433c-.777-.518-2.379-.309-3.312-.292a4.416%204.416%200%2000-1.666.352%203.5%203.5%200%2000-1.218.738%201.817%201.817%200%20001.409%203.171%203.3%203.3%200%20001.442-.321c1.436-.62%203.141-2.32%203.346-3.648zm2.61%202a6.556%206.556%200%2000-3.724%203.506%203.091%203.091%200%2000-.321%201.314%201.907%201.907%200%20003.3%201.346%207.422%207.422%200%2000.7-1.218c.621-1.333.866-3.72.046-4.948zm2.557-7.167a5.941%205.941%200%20003.7-3.167%203.243%203.243%200%2000.319-1.346%201.915%201.915%200%2000-1.794-1.954%201.832%201.832%200%2000-1.6.641%207.382%207.382%200%2000-.705%201.218c-.62%201.434-.842%203.48.081%204.603zm4.208%2012.115a3.244%203.244%200%2000-.321-1.345%205.869%205.869%200%2000-3.554-3.269%205.386%205.386%200%2000-.226%204.711%204.147%204.147%200%2000.7%201.121c1.133%201.23%203.505.32%203.402-1.218zm4.2-6.28a7.466%207.466%200%2000-1.217-.7%204.425%204.425%200%2000-1.666-.352%206.4%206.4%200%2000-3.188.555%205.959%205.959%200%20003.316%203.386%203.672%203.672%200%20001.442.32%201.8%201.8%200%20001.31-3.209z%22%2F%3E%0A%20%20%20%20%3C%2Fg%3E%0A%3C%2Fsvg%3E">
+	<style>
+.cucumber-react .cucumber-status--passed {
+  color: #2CB14A;
+}
+.cucumber-react .cucumber-status--skipped {
+  color: #00A0CC;
+}
+.cucumber-react .cucumber-status--pending {
+  color: #FFAD33;
+}
+.cucumber-react .cucumber-status--undefined {
+  color: #FFAD33;
+}
+.cucumber-react .cucumber-status--ambiguous {
+  color: #F4EBFD;
+}
+.cucumber-react .cucumber-status--failed {
+  color: #BB0000;
+}
+.cucumber-react .cucumber-status--unknown {
+  color: #B6BECB;
+}
+.cucumber-react h1, .cucumber-react h2, .cucumber-react h3 {
+  padding: 0;
+  margin: 0;
+}
+.cucumber-react a {
+  color: inherit;
+}
+.cucumber-react .gherkin-document-list {
+  font: 14px "Open Sans", sans-serif;
+  color: #161C24;
+  background: #fff;
+  overflow-x: hidden;
+}
+.cucumber-react .cucumber-title {
+  margin-top: 0.3em;
+  margin-bottom: 0;
+  display: inline-block;
+}
+.cucumber-react .cucumber-title__keyword {
+  font-weight: bold;
+}
+.cucumber-react .cucumber-title__text {
+  font-weight: normal;
+}
+.cucumber-react .cucumber-tags {
+  padding: 0;
+  margin-bottom: 0;
+}
+.cucumber-react .cucumber-tags .cucumber-tag {
+  display: inline;
+  list-style-type: none;
+  padding: 4px 8px 4px 8px;
+  margin-right: 6px;
+  background-color: #FFFFFF;
+  border-radius: 6px;
+}
+.cucumber-react .cucumber-feature__icon {
+  padding-top: 0.35em;
+  padding-right: 0.5em;
+}
+.cucumber-react .cucumber-description,
+.cucumber-react .cucumber-children {
+  margin-left: 1em;
+}
+.cucumber-react .cucumber-feature,
+.cucumber-react .cucumber-rule,
+.cucumber-react .cucumber-scenario,
+.cucumber-react .cucumber-background {
+  margin-bottom: 1em;
+}
+.cucumber-react .cucumber-steps {
+  list-style-type: none;
+  padding-left: 10px;
+}
+.cucumber-react .cucumber-steps .cucumber-step {
+  display: flex;
+}
+.cucumber-react .cucumber-steps .cucumber-step__status {
+  padding-top: 0.2em;
+  padding-right: 0.5em;
+}
+.cucumber-react .cucumber-steps .cucumber-step__content {
+  flex-grow: 1;
+  max-width: calc(100% - 1.5em);
+}
+.cucumber-react .cucumber-steps .cucumber-step__keyword {
+  font-weight: bold;
+}
+.cucumber-react .cucumber-steps .cucumber-step__text {
+  font-weight: normal;
+}
+.cucumber-react .cucumber-steps .cucumber-step__param {
+  font-weight: normal;
+  font-style: italic;
+}
+.cucumber-react .cucumber-table {
+  border-collapse: collapse;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+.cucumber-react .cucumber-table__header-cell {
+  border: 1px solid #4B5662;
+  padding: 0.3em;
+}
+.cucumber-react .cucumber-table__cell {
+  border: 1px solid #4B5662;
+  padding: 0.3em;
+}
+.cucumber-react .cucumber-table__cell__status {
+  padding: 0.5em 3px 3px 3px;
+}
+.cucumber-react .cucumber-table__cell__step {
+  flex-grow: 1;
+}
+.cucumber-react .cucumber-code {
+  padding: 0.25em;
+  background-color: #ebebeb;
+}
+.cucumber-react .cucumber-error {
+  padding: 0.5em;
+  margin: 0;
+  overflow-x: auto;
+}
+.cucumber-react .cucumber-no-documents {
+  font: 14px "Open Sans", sans-serif;
+}
+.cucumber-react .cucumber-attachment__icon {
+  margin-right: 0.5em;
+}
+.cucumber-react .cucumber-attachment__image {
+  max-width: 100%;
+  margin-top: 1em;
+}
+.cucumber-react .cucumber-attachment__text {
+  background-color: #ebebeb;
+  padding: 0.5em;
+  overflow-x: auto;
+}
+.cucumber-react .cucumber-anchor {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-top: 0.3em;
+}
+.cucumber-react .cucumber-anchor__link {
+  opacity: 0;
+  transition: all 0.35s ease-in-out;
+  position: absolute;
+  left: -20px;
+  display: flex;
+  align-items: center;
+}
+.cucumber-react .cucumber-anchor__icon {
+  margin-right: 0.5em;
+}
+.cucumber-react .cucumber-anchor:hover a {
+  opacity: 1;
+  width: max-content;
+  transition: all 0.35s ease-in-out;
+}
+.cucumber-react .cucumber-anchor > * {
+  height: 100%;
+  margin-top: 0px;
+}
+
+.cucumber-report-header {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  font: 11px "Open Sans", sans-serif;
+  margin-bottom: 1em;
+}
+.cucumber-report-header > * {
+  padding: 1em;
+}
+.cucumber-report-header .cucumber-status-filter {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+.cucumber-report-header .cucumber-status-filter table {
+  width: 100%;
+}
+.cucumber-report-header .cucumber-execution-data {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+.cucumber-report-header .cucumber-search-bar {
+  border-right: 0;
+}
+.cucumber-report-header .cucumber-search-bar form.cucumber-search-bar-search {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 9fr 1fr;
+}
+.cucumber-report-header .cucumber-search-bar form.cucumber-search-bar-search input {
+  padding: 0.4em;
+  border-radius: 0;
+}
+.cucumber-report-header .cucumber-search-bar form.cucumber-search-bar-search button {
+  height: 2.2em;
+  padding-left: 0.6em;
+  padding-right: 0.6em;
+}
+.cucumber-report-header .cucumber-search-bar p.help {
+  font-size: 80%;
+}
+.cucumber-report-header .cucumber-search-bar form.cucumber-search-bar-filter ul {
+  display: inline;
+}
+.cucumber-report-header .cucumber-search-bar form.cucumber-search-bar-filter ul li {
+  list-style-type: none;
+  display: inline-block;
+}
+.cucumber-report-header .cucumber-search-bar form.cucumber-search-bar-filter ul li input {
+  display: inline-block;
+  width: auto;
+  height: 0.6em;
+}
+.cucumber-report-header .cucumber-search-bar form.cucumber-search-bar-filter ul li label {
+  padding-right: 1em;
+}
+
+@media only screen and (min-width: 600px) {
+  .cucumber-report-header {
+    grid-template-columns: 1fr 1fr;
+  }
+  .cucumber-report-header .cucumber-status-filter {
+    border-right: 1px solid rgba(0, 0, 0, 0.1);
+  }
+  .cucumber-report-header .cucumber-search-bar {
+    grid-column: 1/-1;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .cucumber-report-header {
+    grid-template-columns: 1fr 1fr 2fr;
+  }
+  .cucumber-report-header .cucumber-status-filter {
+    border-bottom: 0;
+  }
+  .cucumber-report-header .cucumber-execution-data {
+    border-right: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 0;
+  }
+  .cucumber-report-header .cucumber-search-bar {
+    grid-column: auto;
+  }
+}
+.accordion {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 2px;
+}
+
+.accordion__item + .accordion__item {
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.accordion__button {
+    background-color: #f4f4f4;
+    color: #444;
+    cursor: pointer;
+    padding: 10px;
+    width: 100%;
+    text-align: left;
+    border: none;
+}
+
+.accordion__button:hover {
+    background-color: #ddd;
+}
+
+.accordion__button:before {
+    display: inline-block;
+    content: '';
+    height: 10px;
+    width: 10px;
+    margin-right: 12px;
+    border-bottom: 2px solid currentColor;
+    border-right: 2px solid currentColor;
+    transform: rotate(-45deg);
+}
+
+.accordion__button[aria-expanded='true']::before,
+.accordion__button[aria-selected='true']::before {
+    transform: rotate(45deg);
+}
+
+.accordion__panel {
+    padding: 20px;
+    animation: fadein 0.35s ease-in;
+}
+
+	</style>
+</head>
+<body>
+<div id="content">
+</div>
+<script>
+window.CUCUMBER_MESSAGES = [{"meta":{"protocolVersion":"15.0.0","implementation":{"name":"cucumber-jvm","version":"6.10.4"},"runtime":{"name":"Java HotSpot(TM) 64-Bit Server VM","version":"11.0.13+10-LTS-370"},"os":{"name":"Windows 10"},"cpu":{"name":"amd64"}}},{"testRunStarted":{"timestamp":{"seconds":"1723937272","nanos":451526800}}},{"source":{"uri":"file:///E:/My%20Projects/All%20Projects/Finti_UI_TestAutomation/src/test/java/Feature/AddMerchant.feature","data":"Feature: Add a Merchant\r\n\r\n\r\n\r\n\r\n","mediaType":"text/x.cucumber.gherkin+plain"}},{"gherkinDocument":{"uri":"file:///E:/My%20Projects/All%20Projects/Finti_UI_TestAutomation/src/test/java/Feature/AddMerchant.feature","feature":{"location":{"line":1,"column":1},"language":"en","keyword":"Feature","name":"Add a Merchant"}}},{"source":{"uri":"file:///E:/My%20Projects/All%20Projects/Finti_UI_TestAutomation/src/test/java/Feature/Login.feature","data":"Feature: Finti User Login\r\n\r\n  Scenario Outline: User login with different credentials\r\n    Given The user is on the login page\r\n    When The user enters username \"\u003cusername\u003e\" and password \"\u003cpassword\u003e\"\r\n    And The user clicks the login button\r\n    Then The user should be redirected to \"\u003cexpectedPage\u003e\"\r\n    Examples:\r\n      | username                   | password   | expectedPage |\r\n      | superadmin@firstapp.io     | Supra#457  | Dashboard    |\r\n\r\n  Scenario: Adding a new merchant business page\r\n    Given The user is on the merchant addition page\r\n    When The user fills out business page with the following details\r\n    Then User clicks on save and continue\r\n\r\n  Scenario: Adding a new merchant banking page\r\n    Given The user is on the banking page\r\n    When The user fills out banking page with the following details\r\n\r\n  Scenario: Adding a new merchant insights page\r\n    Given The user is on the insights page\r\n    When The user fills out insights page with the following details\r\n\r\n  Scenario: Adding a new merchant agreement page\r\n    Given The user is on the agreement page\r\n    When The user fills out agreement page with the following details\r\n\r\n  Scenario: Adding a new merchant payment page\r\n    Given The user is on the payment page\r\n    When The user fills out payment page with the following details\r\n","mediaType":"text/x.cucumber.gherkin+plain"}},{"gherkinDocument":{"uri":"file:///E:/My%20Projects/All%20Projects/Finti_UI_TestAutomation/src/test/java/Feature/Login.feature","feature":{"location":{"line":1,"column":1},"language":"en","keyword":"Feature","name":"Finti User Login","children":[{"scenario":{"location":{"line":3,"column":3},"keyword":"Scenario Outline","name":"User login with different credentials","steps":[{"location":{"line":4,"column":5},"keyword":"Given ","text":"The user is on the login page","id":"d901238b-1ecf-4f13-ab10-3141b4238860"},{"location":{"line":5,"column":5},"keyword":"When ","text":"The user enters username \"\u003cusername\u003e\" and password \"\u003cpassword\u003e\"","id":"770c0f86-d5c7-4f58-9e0e-92ec4b579797"},{"location":{"line":6,"column":5},"keyword":"And ","text":"The user clicks the login button","id":"a4b1988c-8b2f-474e-b8f3-3cb9a1e42a82"},{"location":{"line":7,"column":5},"keyword":"Then ","text":"The user should be redirected to \"\u003cexpectedPage\u003e\"","id":"c243b978-5a82-41fb-955e-35c800e94859"}],"examples":[{"location":{"line":8,"column":5},"keyword":"Examples","tableHeader":{"location":{"line":9,"column":7},"cells":[{"location":{"line":9,"column":9},"value":"username"},{"location":{"line":9,"column":38},"value":"password"},{"location":{"line":9,"column":51},"value":"expectedPage"}],"id":"2a3270b5-1e16-4cbc-99eb-1b00d240e961"},"tableBody":[{"location":{"line":10,"column":7},"cells":[{"location":{"line":10,"column":9},"value":"superadmin@firstapp.io"},{"location":{"line":10,"column":38},"value":"Supra#457"},{"location":{"line":10,"column":51},"value":"Dashboard"}],"id":"92faadaf-2ea1-4752-b43e-7ae9bfe8aad7"}],"id":"ea0d4583-1986-4ea6-bd8f-2e5c0d9a4282"}],"id":"f73c0318-ea13-47cf-9cea-f2abebd0f31a"}},{"scenario":{"location":{"line":12,"column":3},"keyword":"Scenario","name":"Adding a new merchant business page","steps":[{"location":{"line":13,"column":5},"keyword":"Given ","text":"The user is on the merchant addition page","id":"edcf8ffd-c525-47fc-aa8a-0d357a680b68"},{"location":{"line":14,"column":5},"keyword":"When ","text":"The user fills out business page with the following details","id":"682339f7-cb80-4c70-bad6-1f1155321563"},{"location":{"line":15,"column":5},"keyword":"Then ","text":"User clicks on save and continue","id":"541e4738-ef97-4c98-bba4-2b8699a6dcc0"}],"id":"39547dd4-8564-4b4e-ba83-9fd8c7f36bb8"}},{"scenario":{"location":{"line":17,"column":3},"keyword":"Scenario","name":"Adding a new merchant banking page","steps":[{"location":{"line":18,"column":5},"keyword":"Given ","text":"The user is on the banking page","id":"d104a0f6-d0cf-4888-bd1f-e4cfbdae1558"},{"location":{"line":19,"column":5},"keyword":"When ","text":"The user fills out banking page with the following details","id":"90323831-4cdb-4473-873b-4c258f56fa13"}],"id":"628d545d-e5a6-4d28-a1f8-a8962c49d76d"}},{"scenario":{"location":{"line":21,"column":3},"keyword":"Scenario","name":"Adding a new merchant insights page","steps":[{"location":{"line":22,"column":5},"keyword":"Given ","text":"The user is on the insights page","id":"39896ede-1a22-4f17-b997-b5db76a48baf"},{"location":{"line":23,"column":5},"keyword":"When ","text":"The user fills out insights page with the following details","id":"cdc4307e-0ac3-4a7d-9a79-54a9b7284a1c"}],"id":"13a01e3b-0092-4518-9931-9405c32f1217"}},{"scenario":{"location":{"line":25,"column":3},"keyword":"Scenario","name":"Adding a new merchant agreement page","steps":[{"location":{"line":26,"column":5},"keyword":"Given ","text":"The user is on the agreement page","id":"feab176f-c7e5-4d7e-ac4d-d695b5eeee1b"},{"location":{"line":27,"column":5},"keyword":"When ","text":"The user fills out agreement page with the following details","id":"c7bd314d-aade-4631-ae19-39417694e2ca"}],"id":"9862a24d-cf84-46ff-9b7e-0ab36a2988f5"}},{"scenario":{"location":{"line":29,"column":3},"keyword":"Scenario","name":"Adding a new merchant payment page","steps":[{"location":{"line":30,"column":5},"keyword":"Given ","text":"The user is on the payment page","id":"1ffcea00-54de-475e-b1a5-5bd2e92b0cf7"},{"location":{"line":31,"column":5},"keyword":"When ","text":"The user fills out payment page with the following details","id":"ee4f55de-4c55-47aa-8c62-d605abee2a2c"}],"id":"6700fbf7-20e5-42b4-82f7-739f7cbb666d"}}]}}},{"pickle":{"id":"b919d1cc-b402-4aac-ae58-fe4289321db3","uri":"file:///E:/My%20Projects/All%20Projects/Finti_UI_TestAutomation/src/test/java/Feature/Login.feature","name":"User login with different credentials","language":"en","steps":[{"text":"The user is on the login page","id":"50fa2c93-ac7f-418b-8b91-abfe46f10966","astNodeIds":["d901238b-1ecf-4f13-ab10-3141b4238860","92faadaf-2ea1-4752-b43e-7ae9bfe8aad7"]},{"text":"The user enters username \"superadmin@firstapp.io\" and password \"Supra#457\"","id":"94e5ff66-4700-4338-986e-8e4d737e2036","astNodeIds":["770c0f86-d5c7-4f58-9e0e-92ec4b579797","92faadaf-2ea1-4752-b43e-7ae9bfe8aad7"]},{"text":"The user clicks the login button","id":"8e3b5e45-dfca-4fe3-8bac-3362ea65278e","astNodeIds":["a4b1988c-8b2f-474e-b8f3-3cb9a1e42a82","92faadaf-2ea1-4752-b43e-7ae9bfe8aad7"]},{"text":"The user should be redirected to \"Dashboard\"","id":"8dafcffd-d645-4283-a289-85514643ba5f","astNodeIds":["c243b978-5a82-41fb-955e-35c800e94859","92faadaf-2ea1-4752-b43e-7ae9bfe8aad7"]}],"astNodeIds":["f73c0318-ea13-47cf-9cea-f2abebd0f31a","92faadaf-2ea1-4752-b43e-7ae9bfe8aad7"]}},{"pickle":{"id":"4e5aae2e-cee4-421b-867a-376ca5aee115","uri":"file:///E:/My%20Projects/All%20Projects/Finti_UI_TestAutomation/src/test/java/Feature/Login.feature","name":"Adding a new merchant business page","language":"en","steps":[{"text":"The user is on the merchant addition page","id":"0fdd0531-c8e9-4788-8238-7d973f1f6d63","astNodeIds":["edcf8ffd-c525-47fc-aa8a-0d357a680b68"]},{"text":"The user fills out business page with the following details","id":"c585309b-501c-475c-8870-68893dc9b116","astNodeIds":["682339f7-cb80-4c70-bad6-1f1155321563"]},{"text":"User clicks on save and continue","id":"1abc93f7-a4e1-485d-96b4-b917c9d90539","astNodeIds":["541e4738-ef97-4c98-bba4-2b8699a6dcc0"]}],"astNodeIds":["39547dd4-8564-4b4e-ba83-9fd8c7f36bb8"]}},{"pickle":{"id":"c2036e92-1396-4a49-a462-1cf4c9e77fb0","uri":"file:///E:/My%20Projects/All%20Projects/Finti_UI_TestAutomation/src/test/java/Feature/Login.feature","name":"Adding a new merchant banking page","language":"en","steps":[{"text":"The user is on the banking page","id":"681207df-92e2-4aac-9945-46a7ba4a7f2a","astNodeIds":["d104a0f6-d0cf-4888-bd1f-e4cfbdae1558"]},{"text":"The user fills out banking page with the following details","id":"485f831b-612a-4a13-b644-c70cad674db2","astNodeIds":["90323831-4cdb-4473-873b-4c258f56fa13"]}],"astNodeIds":["628d545d-e5a6-4d28-a1f8-a8962c49d76d"]}},{"pickle":{"id":"5fb0129e-82c4-4cbd-a6b7-c739505d50f4","uri":"file:///E:/My%20Projects/All%20Projects/Finti_UI_TestAutomation/src/test/java/Feature/Login.feature","name":"Adding a new merchant insights page","language":"en","steps":[{"text":"The user is on the insights page","id":"c23d675d-10cd-49a4-9439-2e84ad4dbf22","astNodeIds":["39896ede-1a22-4f17-b997-b5db76a48baf"]},{"text":"The user fills out insights page with the following details","id":"03508bb0-008a-4807-ab59-bf77e4619117","astNodeIds":["cdc4307e-0ac3-4a7d-9a79-54a9b7284a1c"]}],"astNodeIds":["13a01e3b-0092-4518-9931-9405c32f1217"]}},{"pickle":{"id":"0b4b2611-cc6d-41a6-9430-9268c47a3a01","uri":"file:///E:/My%20Projects/All%20Projects/Finti_UI_TestAutomation/src/test/java/Feature/Login.feature","name":"Adding a new merchant agreement page","language":"en","steps":[{"text":"The user is on the agreement page","id":"01de85d1-5bf8-4370-bb3e-d3c47f382a32","astNodeIds":["feab176f-c7e5-4d7e-ac4d-d695b5eeee1b"]},{"text":"The user fills out agreement page with the following details","id":"863bd2e3-cc5d-47b0-bed1-7accbee5cce7","astNodeIds":["c7bd314d-aade-4631-ae19-39417694e2ca"]}],"astNodeIds":["9862a24d-cf84-46ff-9b7e-0ab36a2988f5"]}},{"pickle":{"id":"433fc9d7-c5a1-4082-9ea7-08c04fbfb1b5","uri":"file:///E:/My%20Projects/All%20Projects/Finti_UI_TestAutomation/src/test/java/Feature/Login.feature","name":"Adding a new merchant payment page","language":"en","steps":[{"text":"The user is on the payment page","id":"58a435c6-a800-4e53-b4fd-a51cdad888e9","astNodeIds":["1ffcea00-54de-475e-b1a5-5bd2e92b0cf7"]},{"text":"The user fills out payment page with the following details","id":"eaeb84c7-11da-4ca2-892f-9137e69588a6","astNodeIds":["ee4f55de-4c55-47aa-8c62-d605abee2a2c"]}],"astNodeIds":["6700fbf7-20e5-42b4-82f7-739f7cbb666d"]}},{"testCase":{"id":"111f932c-77bc-4a0d-aa4d-9e1c65707981","pickleId":"b919d1cc-b402-4aac-ae58-fe4289321db3","testSteps":[{"id":"d67f6c1f-d1a0-4d24-b205-512c0df1a24d","pickleStepId":"50fa2c93-ac7f-418b-8b91-abfe46f10966","stepDefinitionIds":["031eeb77-ef66-45f1-be26-3651cc7cb6b2"],"stepMatchArgumentsLists":[{}]},{"id":"622b4184-b6db-4923-aea5-efd17e6df7bd","pickleStepId":"94e5ff66-4700-4338-986e-8e4d737e2036","stepDefinitionIds":["9d442b74-e18c-497d-ae5a-b06192549a64"],"stepMatchArgumentsLists":[{"stepMatchArguments":[{"parameterTypeName":"string","group":{"start":25,"value":"\"superadmin@firstapp.io\"","children":[{"start":26,"value":"superadmin@firstapp.io","children":[{}]},{"children":[{}]}]}},{"parameterTypeName":"string","group":{"start":63,"value":"\"Supra#457\"","children":[{"start":64,"value":"Supra#457","children":[{}]},{"children":[{}]}]}}]}]},{"id":"bf61a9d0-d3d0-44f7-a666-9fc7f00dd692","pickleStepId":"8e3b5e45-dfca-4fe3-8bac-3362ea65278e","stepDefinitionIds":["1502e16f-0c3d-4d31-8ac5-eb0ada024507"],"stepMatchArgumentsLists":[{}]},{"id":"18c48fed-f170-44cf-8b1e-3429cd3a07f3","pickleStepId":"8dafcffd-d645-4283-a289-85514643ba5f","stepDefinitionIds":["3a731bac-0f0d-4bc5-b0a5-2c047a1764be"],"stepMatchArgumentsLists":[{"stepMatchArguments":[{"parameterTypeName":"string","group":{"start":33,"value":"\"Dashboard\"","children":[{"start":34,"value":"Dashboard","children":[{}]},{"children":[{}]}]}}]}]}]}},{"testCaseStarted":{"timestamp":{"seconds":"1723937272","nanos":930237800},"testCaseId":"111f932c-77bc-4a0d-aa4d-9e1c65707981","id":"ee6d43d2-0f1b-4ff2-b464-7863f17e2001"}},{"testStepStarted":{"timestamp":{"seconds":"1723937273","nanos":160621500},"testStepId":"d67f6c1f-d1a0-4d24-b205-512c0df1a24d","testCaseStartedId":"ee6d43d2-0f1b-4ff2-b464-7863f17e2001"}},{"testStepFinished":{"testStepResult":{"status":"PASSED","duration":{"seconds":"17","nanos":346635300}},"timestamp":{"seconds":"1723937290","nanos":507256800},"testStepId":"d67f6c1f-d1a0-4d24-b205-512c0df1a24d","testCaseStartedId":"ee6d43d2-0f1b-4ff2-b464-7863f17e2001"}},{"testStepStarted":{"timestamp":{"seconds":"1723937290","nanos":532188300},"testStepId":"622b4184-b6db-4923-aea5-efd17e6df7bd","testCaseStartedId":"ee6d43d2-0f1b-4ff2-b464-7863f17e2001"}},{"testStepFinished":{"testStepResult":{"status":"PASSED","duration":{"seconds":"7","nanos":889910600}},"timestamp":{"seconds":"1723937298","nanos":422098900},"testStepId":"622b4184-b6db-4923-aea5-efd17e6df7bd","testCaseStartedId":"ee6d43d2-0f1b-4ff2-b464-7863f17e2001"}},{"testStepStarted":{"timestamp":{"seconds":"1723937298","nanos":423096700},"testStepId":"bf61a9d0-d3d0-44f7-a666-9fc7f00dd692","testCaseStartedId":"ee6d43d2-0f1b-4ff2-b464-7863f17e2001"}},{"testStepFinished":{"testStepResult":{"status":"PASSED","duration":{"seconds":"3","nanos":613342800}},"timestamp":{"seconds":"1723937302","nanos":36439500},"testStepId":"bf61a9d0-d3d0-44f7-a666-9fc7f00dd692","testCaseStartedId":"ee6d43d2-0f1b-4ff2-b464-7863f17e2001"}},{"testStepStarted":{"timestamp":{"seconds":"1723937302","nanos":39429700},"testStepId":"18c48fed-f170-44cf-8b1e-3429cd3a07f3","testCaseStartedId":"ee6d43d2-0f1b-4ff2-b464-7863f17e2001"}},{"testStepFinished":{"testStepResult":{"status":"PASSED","duration":{"seconds":"4","nanos":735342600}},"timestamp":{"seconds":"1723937306","nanos":774772300},"testStepId":"18c48fed-f170-44cf-8b1e-3429cd3a07f3","testCaseStartedId":"ee6d43d2-0f1b-4ff2-b464-7863f17e2001"}},{"testCaseFinished":{"timestamp":{"seconds":"1723937306","nanos":789730700},"testCaseStartedId":"ee6d43d2-0f1b-4ff2-b464-7863f17e2001"}},{"testCase":{"id":"801ae857-700b-4971-909f-221163847eac","pickleId":"4e5aae2e-cee4-421b-867a-376ca5aee115","testSteps":[{"id":"a3f13ef7-faf8-4107-9566-3c6b30107bb4","pickleStepId":"0fdd0531-c8e9-4788-8238-7d973f1f6d63","stepDefinitionIds":["f8560f03-2e06-49f0-95f1-51f709c5b8d8"],"stepMatchArgumentsLists":[{}]},{"id":"1d899ca9-eaf3-4852-9670-053977bb6bba","pickleStepId":"c585309b-501c-475c-8870-68893dc9b116","stepDefinitionIds":["6f595e1e-1da5-49f0-baef-6d07500ccab6"],"stepMatchArgumentsLists":[{}]},{"id":"bf284cec-5d8c-4394-a72c-97f3bae80720","pickleStepId":"1abc93f7-a4e1-485d-96b4-b917c9d90539","stepDefinitionIds":["a2cf6de2-29ab-4911-b7a7-c8e2d5b504b4"],"stepMatchArgumentsLists":[{}]}]}},{"testCaseStarted":{"timestamp":{"seconds":"1723937307","nanos":68985100},"testCaseId":"801ae857-700b-4971-909f-221163847eac","id":"bbbb304b-0607-47e4-a36b-0811d5e783c0"}},{"testStepStarted":{"timestamp":{"seconds":"1723937307","nanos":71976900},"testStepId":"a3f13ef7-faf8-4107-9566-3c6b30107bb4","testCaseStartedId":"bbbb304b-0607-47e4-a36b-0811d5e783c0"}},{"testStepFinished":{"testStepResult":{"status":"PASSED","duration":{"seconds":"3","nanos":131630100}},"timestamp":{"seconds":"1723937310","nanos":203607000},"testStepId":"a3f13ef7-faf8-4107-9566-3c6b30107bb4","testCaseStartedId":"bbbb304b-0607-47e4-a36b-0811d5e783c0"}},{"testStepStarted":{"timestamp":{"seconds":"1723937310","nanos":204604300},"testStepId":"1d899ca9-eaf3-4852-9670-053977bb6bba","testCaseStartedId":"bbbb304b-0607-47e4-a36b-0811d5e783c0"}},{"testStepFinished":{"testStepResult":{"status":"PASSED","duration":{"seconds":"29","nanos":294696800}},"timestamp":{"seconds":"1723937339","nanos":499301100},"testStepId":"1d899ca9-eaf3-4852-9670-053977bb6bba","testCaseStartedId":"bbbb304b-0607-47e4-a36b-0811d5e783c0"}},{"testStepStarted":{"timestamp":{"seconds":"1723937339","nanos":500298000},"testStepId":"bf284cec-5d8c-4394-a72c-97f3bae80720","testCaseStartedId":"bbbb304b-0607-47e4-a36b-0811d5e783c0"}},{"testStepFinished":{"testStepResult":{"status":"PASSED","duration":{"seconds":"1","nanos":241680700}},"timestamp":{"seconds":"1723937340","nanos":741978700},"testStepId":"bf284cec-5d8c-4394-a72c-97f3bae80720","testCaseStartedId":"bbbb304b-0607-47e4-a36b-0811d5e783c0"}},{"testCaseFinished":{"timestamp":{"seconds":"1723937340","nanos":743973600},"testCaseStartedId":"bbbb304b-0607-47e4-a36b-0811d5e783c0"}},{"testCase":{"id":"e3ed8948-5cf6-4687-8634-80172f1f7977","pickleId":"c2036e92-1396-4a49-a462-1cf4c9e77fb0","testSteps":[{"id":"d5cb7f10-8b8f-434d-8076-be8d9619f32f","pickleStepId":"681207df-92e2-4aac-9945-46a7ba4a7f2a","stepDefinitionIds":["befedf3a-d09b-49a0-8e00-42a6024528e7"],"stepMatchArgumentsLists":[{}]},{"id":"a72eb380-bc90-44b2-b490-af369b36cc7b","pickleStepId":"485f831b-612a-4a13-b644-c70cad674db2","stepDefinitionIds":["f641e2f4-56ed-42c8-8dfc-27c77c42d34c"],"stepMatchArgumentsLists":[{}]}]}},{"testCaseStarted":{"timestamp":{"seconds":"1723937340","nanos":760928200},"testCaseId":"e3ed8948-5cf6-4687-8634-80172f1f7977","id":"f1fa093e-14ab-4315-a936-643965f420c3"}},{"testStepStarted":{"timestamp":{"seconds":"1723937340","nanos":761932000},"testStepId":"d5cb7f10-8b8f-434d-8076-be8d9619f32f","testCaseStartedId":"f1fa093e-14ab-4315-a936-643965f420c3"}},{"testStepFinished":{"testStepResult":{"status":"PASSED","duration":{"nanos":763952200}},"timestamp":{"seconds":"1723937341","nanos":525884200},"testStepId":"d5cb7f10-8b8f-434d-8076-be8d9619f32f","testCaseStartedId":"f1fa093e-14ab-4315-a936-643965f420c3"}},{"testStepStarted":{"timestamp":{"seconds":"1723937341","nanos":528875200},"testStepId":"a72eb380-bc90-44b2-b490-af369b36cc7b","testCaseStartedId":"f1fa093e-14ab-4315-a936-643965f420c3"}},{"testStepFinished":{"testStepResult":{"status":"PASSED","duration":{"seconds":"16","nanos":277490600}},"timestamp":{"seconds":"1723937357","nanos":806365800},"testStepId":"a72eb380-bc90-44b2-b490-af369b36cc7b","testCaseStartedId":"f1fa093e-14ab-4315-a936-643965f420c3"}},{"testCaseFinished":{"timestamp":{"seconds":"1723937357","nanos":808360500},"testCaseStartedId":"f1fa093e-14ab-4315-a936-643965f420c3"}},{"testCase":{"id":"4acbf90e-d027-47d6-a525-b5f59971e80f","pickleId":"5fb0129e-82c4-4cbd-a6b7-c739505d50f4","testSteps":[{"id":"7e2e05e8-43e1-4243-9523-e0b541f4272f","pickleStepId":"c23d675d-10cd-49a4-9439-2e84ad4dbf22","stepDefinitionIds":["6b7b68b5-adf0-48a4-95f8-ed358ff0f44c"],"stepMatchArgumentsLists":[{}]},{"id":"6a45f168-2927-4cdd-a0cf-9017c809fe86","pickleStepId":"03508bb0-008a-4807-ab59-bf77e4619117","stepDefinitionIds":["2faf85d0-fded-437b-bbd2-e382aec125f4"],"stepMatchArgumentsLists":[{}]}]}},{"testCaseStarted":{"timestamp":{"seconds":"1723937357","nanos":817338300},"testCaseId":"4acbf90e-d027-47d6-a525-b5f59971e80f","id":"c8cb7d38-dce7-46d9-8c26-cc6684fcc392"}},{"testStepStarted":{"timestamp":{"seconds":"1723937357","nanos":818336400},"testStepId":"7e2e05e8-43e1-4243-9523-e0b541f4272f","testCaseStartedId":"c8cb7d38-dce7-46d9-8c26-cc6684fcc392"}},{"testStepFinished":{"testStepResult":{"status":"PASSED","duration":{"nanos":174531500}},"timestamp":{"seconds":"1723937357","nanos":992867900},"testStepId":"7e2e05e8-43e1-4243-9523-e0b541f4272f","testCaseStartedId":"c8cb7d38-dce7-46d9-8c26-cc6684fcc392"}},{"testStepStarted":{"timestamp":{"seconds":"1723937357","nanos":992867900},"testStepId":"6a45f168-2927-4cdd-a0cf-9017c809fe86","testCaseStartedId":"c8cb7d38-dce7-46d9-8c26-cc6684fcc392"}},{"testStepFinished":{"testStepResult":{"status":"FAILED","message":"org.openqa.selenium.TimeoutException: java.util.concurrent.TimeoutException\nBuild info: version: \u00274.3.0\u0027, revision: \u0027a4995e2c09*\u0027\nSystem info: host: \u0027DESKTOP-KMSC2NJ\u0027, ip: \u0027192.168.1.10\u0027, os.name: \u0027Windows 10\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u002711.0.13\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCommand: [fff1f65a792465a68998ab0c84b878f6, findElement {using\u003dxpath, value\u003d/html/body/div[1]/div/main/div/div/div[1]/div[2]/div/div[3]/div/div[2]/div/button[2]}]\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 127.0.6533.120, chrome: {chromedriverVersion: 127.0.6533.120 (c51f2916e4a..., userDataDir: C:\\Users\\Aakash\\AppData\\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51935}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:51935/devtoo..., se:cdpVersion: 127.0.6533.120, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}\nSession ID: fff1f65a792465a68998ab0c84b878f6\r\n\tat org.openqa.selenium.remote.http.netty.NettyHttpHandler.makeCall(NettyHttpHandler.java:65)\r\n\tat org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)\r\n\tat org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:56)\r\n\tat org.openqa.selenium.remote.http.netty.NettyHttpHandler.execute(NettyHttpHandler.java:49)\r\n\tat org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)\r\n\tat org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:56)\r\n\tat org.openqa.selenium.remote.http.netty.NettyClient.execute(NettyClient.java:98)\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:181)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:569)\r\n\tat org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)\r\n\tat org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:387)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.ja
